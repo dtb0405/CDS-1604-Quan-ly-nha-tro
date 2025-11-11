@@ -34,13 +34,12 @@ coverage/
 # Git merge artifacts
 *.orig
 
-# Database dumps
+# Database dumps (giữ schema chính, cho phép database.sql nếu cần tham khảo)
 *.sql
 !database/schema_hoan_chinh.sql
+!database/database.sql
 
-# Ignore generated reports if not needed
-BAO_CAO_DON_DEP_CODE.md
-BAO_CAO_HOAN_THANH_FINAL.md
+# Báo cáo nên commit (xóa khỏi ignore)
 
 # Keep README files
 !README.md
