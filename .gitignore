@@ -15,12 +15,15 @@
 !BAO_CAO_*.md
 
 # Cho phép thư mục database (schema)
+!/database/
 !/database/**
 
 # Cho phép backend (mã nguồn và cấu hình)
+!/backend/
 !/backend/**
 
 # Cho phép frontend (mã nguồn và public)
+!/frontend/
 !/frontend/**
 
 #############################################
