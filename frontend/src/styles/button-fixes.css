@@ -1,0 +1,671 @@
+/* ============================================
+   GLOBAL BUTTON FIXES - PASTEL COOL THEME
+   Sửa tất cả vấn đề màu chữ và nút bấm
+   ============================================ */
+
+/* Override tất cả text-transform uppercase */
+button,
+.btn-primary,
+.btn-secondary,
+.btn-add,
+.btn-add-room,
+.btn-edit,
+.btn-delete,
+.btn-save,
+.btn-cancel,
+.btn-submit,
+.btn-refresh,
+.btn-sync,
+.btn-view,
+.btn-pay,
+.btn-auto,
+.btn-export,
+.btn-back,
+.btn-thanh-toan,
+.btn-checkout,
+.btn-send-reply,
+.btn-status,
+[class*="btn-"],
+.status-badge,
+.trang-thai-badge,
+.badge,
+table th {
+  text-transform: none !important;
+}
+
+/* ========== UNIVERSAL BUTTON BASE STYLES ========== */
+button,
+[class*="btn-"] {
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--shadow-sm) !important;
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
+}
+
+button:hover:not(:disabled),
+[class*="btn-"]:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+button:active:not(:disabled),
+[class*="btn-"]:active:not(:disabled) {
+  transform: translateY(0) !important;
+}
+
+/* ========== PRIMARY BUTTONS (Add, Submit, Save, etc) ========== */
+.btn-primary,
+.btn-add,
+.btn-add-room,
+.btn-submit,
+.btn-save,
+.btn-auto,
+.btn-send-reply,
+.btn-thanh-toan {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--primary) !important;
+  text-shadow: none !important;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-add:hover:not(:disabled),
+.btn-add-room:hover:not(:disabled),
+.btn-submit:hover:not(:disabled),
+.btn-save:hover:not(:disabled),
+.btn-auto:hover:not(:disabled),
+.btn-send-reply:hover:not(:disabled),
+.btn-thanh-toan:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 24px rgba(107, 154, 196, 0.35) !important;
+}
+
+.btn-primary:disabled,
+.btn-add:disabled,
+.btn-add-room:disabled,
+.btn-submit:disabled,
+.btn-save:disabled,
+.btn-auto:disabled,
+.btn-send-reply:disabled,
+.btn-thanh-toan:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ========== SECONDARY BUTTONS (Cancel, Back, etc) ========== */
+.btn-secondary,
+.btn-cancel,
+.btn-back {
+  background: rgba(148, 163, 184, 0.1) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+  text-shadow: none !important;
+}
+
+.btn-secondary:hover:not(:disabled),
+.btn-cancel:hover:not(:disabled),
+.btn-back:hover:not(:disabled) {
+  background: rgba(148, 163, 184, 0.2) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--text-muted) !important;
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.2) !important;
+}
+
+/* ========== SUCCESS BUTTONS (Refresh, Sync, etc) ========== */
+.btn-refresh,
+.btn-sync,
+.btn-export {
+  background: linear-gradient(135deg, rgba(184, 230, 213, 0.5), rgba(111, 186, 170, 0.3)) !important;
+  color: #1a5d3a !important;
+  border-color: var(--success) !important;
+  text-shadow: none !important;
+}
+
+.btn-refresh:hover:not(:disabled),
+.btn-sync:hover:not(:disabled),
+.btn-export:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--success), #5ba691) !important;
+  color: white !important;
+  border-color: var(--success) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(111, 186, 170, 0.4) !important;
+}
+
+.btn-refresh:disabled,
+.btn-sync:disabled,
+.btn-export:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ========== EDIT BUTTONS ========== */
+.btn-edit {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--primary) !important;
+  text-shadow: none !important;
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(107, 154, 196, 0.4) !important;
+}
+
+/* ========== DELETE BUTTONS ========== */
+.btn-delete {
+  background: var(--danger-bg) !important;
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+  text-shadow: none !important;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: var(--danger) !important;
+  color: white !important;
+  border-color: var(--danger) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(240, 163, 163, 0.4) !important;
+}
+
+/* ========== VIEW BUTTONS ========== */
+.btn-view {
+  background: linear-gradient(135deg, rgba(168, 216, 234, 0.3), rgba(185, 207, 234, 0.3)) !important;
+  color: var(--info) !important;
+  border-color: var(--info) !important;
+  text-shadow: none !important;
+}
+
+.btn-view:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--info), #5a8ab8) !important;
+  color: white !important;
+  border-color: var(--info) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(107, 154, 196, 0.4) !important;
+}
+
+/* ========== PAY BUTTONS ========== */
+.btn-pay,
+.btn-checkout {
+  background: var(--danger-bg) !important;
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+  text-shadow: none !important;
+}
+
+.btn-pay:hover:not(:disabled),
+.btn-checkout:hover:not(:disabled) {
+  background: var(--danger) !important;
+  color: white !important;
+  border-color: var(--danger) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(240, 163, 163, 0.4) !important;
+}
+
+/* ========== CLOSE BUTTONS ========== */
+.btn-close {
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  border: 2px solid var(--border-light) !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-close:hover {
+  background: var(--danger) !important;
+  color: white !important;
+  border-color: var(--danger) !important;
+  transform: rotate(90deg) !important;
+  box-shadow: 0 4px 12px rgba(240, 163, 163, 0.3) !important;
+}
+
+/* ========== STATUS BADGES ========== */
+.status-badge,
+.trang-thai-badge,
+.badge {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Success/Paid/Available status */
+.status-badge.status-paid,
+.status-badge.status-success,
+.status-badge.da_thanh_toan,
+.trang-thai-badge.trong,
+.badge-success,
+.status-paid {
+  background: var(--success-bg) !important;
+  color: #1a5d3a !important;
+  border: 2px solid var(--success) !important;
+  text-shadow: none !important;
+}
+
+/* Warning/Unpaid/Occupied status */
+.status-badge.status-unpaid,
+.status-badge.status-warning,
+.status-badge.status-pending,
+.status-badge.chua_thanh_toan,
+.trang-thai-badge.da_thue,
+.badge-warning,
+.status-unpaid {
+  background: var(--warning-bg) !important;
+  color: #7c4a03 !important;
+  border: 2px solid var(--warning) !important;
+  text-shadow: none !important;
+}
+
+/* Danger/Overdue status */
+.status-badge.status-overdue,
+.status-badge.status-danger,
+.badge-danger,
+.status-overdue {
+  background: var(--danger-bg) !important;
+  color: #7f1d1d !important;
+  border: 2px solid var(--danger) !important;
+  text-shadow: none !important;
+}
+
+/* Info/Processing status */
+.status-badge.status-info,
+.status-badge.status-processing,
+.badge-info,
+.status-processing {
+  background: var(--info-bg) !important;
+  color: #1e3a5f !important;
+  border: 2px solid var(--info) !important;
+  text-shadow: none !important;
+}
+
+/* New status */
+.status-badge.status-new,
+.badge-new {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #6B4BA0 !important;
+  border: 2px solid #8B5CF6 !important;
+  text-shadow: none !important;
+}
+
+/* ========== SPECIAL STATUS BUTTONS (PhanHoi) ========== */
+.btn-status {
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid !important;
+}
+
+.btn-status.new {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #6B4BA0 !important;
+  border-color: #8B5CF6 !important;
+}
+
+.btn-status.new:hover:not(:disabled) {
+  background: #8B5CF6 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+.btn-status.processing {
+  background: var(--info-bg) !important;
+  color: #1e3a5f !important;
+  border-color: var(--info) !important;
+}
+
+.btn-status.processing:hover:not(:disabled) {
+  background: var(--info) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(107, 154, 196, 0.3) !important;
+}
+
+.btn-status.done {
+  background: var(--success-bg) !important;
+  color: #1a5d3a !important;
+  border-color: var(--success) !important;
+}
+
+.btn-status.done:hover:not(:disabled) {
+  background: var(--success) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(111, 186, 170, 0.3) !important;
+}
+
+.btn-status:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ========== TENANT DASHBOARD SPECIFIC ========== */
+/* Welcome section */
+.welcome-section,
+.welcome-banner {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)) !important;
+  color: var(--text-primary) !important;
+}
+
+.welcome-section h1,
+.welcome-banner h1 {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+}
+
+.welcome-section p,
+.welcome-banner p {
+  color: var(--text-secondary) !important;
+}
+
+/* Room info cards */
+.room-info-card h2,
+.financial-info-card h2,
+.info-cards h3,
+.stat-item .label {
+  color: var(--text-primary) !important;
+}
+
+.stat-item.paid .value,
+.stat-item.unpaid .value {
+  color: var(--text-primary) !important;
+}
+
+/* Financial items */
+.financial-item-compact,
+.financial-grid-compact .financial-item-compact {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.financial-item-compact.total {
+  background: linear-gradient(135deg, var(--info-bg), var(--primary-lightest)) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Recent invoices */
+.recent-invoices .invoice-item .status.paid {
+  background: var(--success-bg) !important;
+  color: #1a5d3a !important;
+  border: 2px solid var(--success) !important;
+}
+
+.recent-invoices .invoice-item .status.unpaid {
+  background: var(--warning-bg) !important;
+  color: #7c4a03 !important;
+  border: 2px solid var(--warning) !important;
+}
+
+/* No room message */
+.no-room-message {
+  background: linear-gradient(135deg, var(--info-bg), var(--primary-lightest)) !important;
+  color: var(--text-primary) !important;
+}
+
+.no-room-message h2,
+.no-room-message p {
+  color: var(--text-primary) !important;
+}
+
+/* ========== MODAL AND FORM BUTTONS ========== */
+.modal-content .btn-primary,
+.form-actions .btn-primary,
+.modal-actions .btn-primary {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--primary) !important;
+  text-shadow: none !important;
+}
+
+.modal-content .btn-primary:hover,
+.form-actions .btn-primary:hover,
+.modal-actions .btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.modal-content .btn-secondary,
+.form-actions .btn-secondary,
+.modal-actions .btn-secondary,
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--glass-border) !important;
+  text-shadow: none !important;
+}
+
+.modal-content .btn-secondary:hover,
+.form-actions .btn-secondary:hover,
+.modal-actions .btn-secondary:hover,
+.btn-secondary:hover {
+  background: var(--primary-lightest) !important;
+  border-color: var(--primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ========== RESPONSIVE AND SIZE ADJUSTMENTS ========== */
+/* Đảm bảo tất cả nút có border radius và padding nhất quán */
+button:not(.btn-close):not(.btn-icon),
+[class*="btn-"]:not(.btn-close):not(.btn-icon) {
+  border-radius: 12px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Smaller buttons trong cards */
+.phong-card button:not(.btn-close),
+.hoa-don-card button:not(.btn-close),
+.card-footer button:not(.btn-close),
+.action-buttons button:not(.btn-close) {
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+
+/* Icon buttons */
+button[class*="icon"],
+.btn-icon {
+  padding: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Large action buttons */
+.btn-large,
+button.large {
+  padding: 16px 32px !important;
+  font-size: 16px !important;
+  border-radius: 14px !important;
+}
+
+/* Full width buttons */
+.btn-block,
+button.block {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 768px) {
+  button:not(.btn-close):not(.btn-icon),
+  [class*="btn-"]:not(.btn-close):not(.btn-icon) {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+  }
+
+  .phong-card button:not(.btn-close),
+  .hoa-don-card button:not(.btn-close),
+  .card-footer button:not(.btn-close) {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  button:not(.btn-close):not(.btn-icon),
+  [class*="btn-"]:not(.btn-close):not(.btn-icon) {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* ========== BUTTON ANIMATIONS ========== */
+@keyframes btnPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(107, 154, 196, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(107, 154, 196, 0);
+  }
+}
+
+@keyframes btnShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Loading state for buttons */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: btnSpin 0.6s linear infinite;
+}
+
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success animation */
+.btn-success-flash {
+  animation: successFlash 0.6s ease;
+}
+
+@keyframes successFlash {
+  0%, 100% { background: var(--success); }
+  50% { background: var(--success-bg); }
+}
+
+/* Ripple effect (already covered in global-improvements.css but reinforced here) */
+button:not(.btn-close)::before,
+[class*="btn-"]:not(.btn-close)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+button:not(.btn-close):active::before,
+[class*="btn-"]:not(.btn-close):active::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* ========== UTILITIES ========== */
+/* Ensure all buttons have position relative for pseudo-elements */
+button,
+[class*="btn-"] {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Focus visible for accessibility */
+button:focus-visible,
+[class*="btn-"]:focus-visible {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Disabled state consistency */
+button:disabled,
+[class*="btn-"]:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+
+/* ========== END OF BUTTON FIXES ========== */
+
+/* Fix table header text */
+table th {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ensure readable text in all scenarios */
+.text-white-on-light {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+}
+
+.text-white-on-dark {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Fix close buttons */
+.btn-close,
+button[aria-label="Close"],
+.close-button {
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  border: none !important;
+  font-size: 28px !important;
+  padding: 4px 12px !important;
+  line-height: 1 !important;
+}
+
+.btn-close:hover,
+button[aria-label="Close"]:hover {
+  color: var(--danger) !important;
+  background: var(--danger-bg) !important;
+  border-radius: 8px !important;
+}
