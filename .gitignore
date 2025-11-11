@@ -1,24 +1,48 @@
-# ==== Backend Node.js ====
-backend/node_modules/
-backend/.env
-backend/uploads/
-backend/npm-debug.log*
-backend/.DS_Store
+#############################################
+# Strict: chỉ đẩy các thư mục cần thiết     #
+#############################################
 
-# ==== Frontend React ====
-frontend/node_modules/
-frontend/.env
-frontend/build/
-frontend/.DS_Store
-frontend/npm-debug.log*
+# Mặc định: ignore tất cả ở cấp root
+/*
 
-# Logs
-*.log
-logs/
+# Cho phép các file cấu hình/dốc chính
+!.gitignore
+!.editorconfig
+!.prettierrc.json
+!README.md
+!README_FULL.md
+!LICENSE
+!BAO_CAO_*.md
 
-# Environment & secrets
+# Cho phép thư mục database (schema)
+!/database/**
+
+# Cho phép backend (mã nguồn và cấu hình)
+!/backend/**
+
+# Cho phép frontend (mã nguồn và public)
+!/frontend/**
+
+#############################################
+# Loại trừ các thư mục/file không cần thiết #
+#############################################
+
+# Node & build artifacts
+**/node_modules/
+**/build/
+**/dist/
+
+# Env & secrets
+**/.env
 .env
 .env.*
+
+# Logs
+**/*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # OS / Editor
 .DS_Store
@@ -34,13 +58,10 @@ coverage/
 # Git merge artifacts
 *.orig
 
-# Database dumps (giữ schema chính, cho phép database.sql nếu cần tham khảo)
-*.sql
-!database/schema_hoan_chinh.sql
-!database/database.sql
+# Uploads (runtime)
+backend/uploads/
 
-# Báo cáo nên commit (xóa khỏi ignore)
+# Database: nếu có dump lớn, có thể ignore theo pattern sau
+# database/*.dump
+# database/backups/
 
-# Keep README files
-!README.md
-!README_FULL.md
