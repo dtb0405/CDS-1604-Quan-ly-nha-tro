@@ -1,0 +1,26 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Builds
+**/build/
+**/dist/
+**/.next/
+
+# Logs
+**/*.log
+
+# Coverage
+**/coverage/
+
+# Uploads
+backend/uploads/
+
+# Generated
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+.DS_Store

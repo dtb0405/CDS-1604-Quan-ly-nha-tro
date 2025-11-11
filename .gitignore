@@ -1,0 +1,47 @@
+# ==== Backend Node.js ====
+backend/node_modules/
+backend/.env
+backend/uploads/
+backend/npm-debug.log*
+backend/.DS_Store
+
+# ==== Frontend React ====
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/.DS_Store
+frontend/npm-debug.log*
+
+# Logs
+*.log
+logs/
+
+# Environment & secrets
+.env
+.env.*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Coverage / temp
+coverage/
+*.tmp
+*.swp
+
+# Git merge artifacts
+*.orig
+
+# Database dumps
+*.sql
+!database/schema_hoan_chinh.sql
+
+# Ignore generated reports if not needed
+BAO_CAO_DON_DEP_CODE.md
+BAO_CAO_HOAN_THANH_FINAL.md
+
+# Keep README files
+!README.md
+!README_FULL.md
